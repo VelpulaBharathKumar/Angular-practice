@@ -1,0 +1,12 @@
+<head>TODO APPLICATION</head>
+<h1>{{title}}</h1>
+<input type="text" #task placeholder="Enter a Task"/>
+<br>  
+<button (click)="addTask(task.value)">Add new Task</button>
+<br>
+<br>
+
+<ul *ngFor="let item of taskList">
+  <li>{{item.name}}</li>
+  <button (click)="remove(item.id)">Remove</button>
+</ul>
