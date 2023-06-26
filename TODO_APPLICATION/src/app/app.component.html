@@ -1,4 +1,3 @@
-<head>TODO APPLICATION</head>
 <h1>{{title}}</h1>
 <input type="text" #task placeholder="Enter a Task"/>
 <br>  
@@ -6,7 +5,8 @@
 <br>
 <br>
 
-<ul *ngFor="let item of taskList">
+<ul *ngFor="let item of taskList;let indexOfelement=index;" >
   <li>{{item.name}}</li>
-  <button (click)="remove(item.id)">Remove</button>
+  <br>
+  <button (click)="remove(indexOfelement)">Remove</button>
 </ul>
