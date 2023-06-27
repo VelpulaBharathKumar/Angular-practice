@@ -1,15 +1,16 @@
 <h1>{{title}}</h1>
 <input type="search" [(ngModel)]="city"  />
-<button (click)="getWeather()">Search</button>
+<button  (click)="getWeather()">Search</button>
 <div class="container-fluid px-1 px-md-4 py-5 mx-auto">
   <div class="row d-flex justify-content-center px-3">
-      <div class="card">
-        <p class="time-font mb-0 ml-4 mt-auto " style="text-align: right;">08:30 <span class="sm-font">AM</span></p>
+      <div class="card"   style="background-image: url('https://i.imgur.com/dpqZJV5.jpg')" 
+      >
+        <p class="time-font mb-0 ml-4 mt-auto " style="text-align: center;">{{weatherData?.name}}</p>
           <h2 class="ml-auto mr-4 mt-3 mb-0">Toronto</h2>
           <p class="ml-auto mr-4 mb-0 med-font">Snow</p>
-          <h1 class="ml-auto mr-4 large-font">-20&#176;</h1>
+          <h1 class="ml-auto mr-4 large-font " style="background-color: aliceblue;font-style: italic;">{{weatherData?.main?.temp}}  F</h1>
       </div>
-      <p class="ml-4 mt-10 mb-4">Wednesday, 18 October 2019</p>
+      <p class="ml-4 mt-10 mb-4">{{currentDateTime}}</p>
   </div>
 </div>
 <router-outlet></router-outlet>
