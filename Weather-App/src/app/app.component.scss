@@ -18,7 +18,7 @@ body {
 
 .time-font {
     font-size: 50px;
-background-color: #fff;}
+color: aliceblue;}
 
 .sm-font {
     font-size: 18px;
@@ -30,4 +30,13 @@ background-color: #fff;}
 
 .large-font {
     font-size: 60px;
+}
+
+.image1{
+    background-image: url('https://i.imgur.com/dpqZJV5.jpg');
+}
+
+.image2{
+    height: 100vh;
+    background-image: url('https://media.istockphoto.com/id/947314334/photo/blue-sky-with-bright-sun.jpg?s=612x612&w=0&k=20&c=XUlLAWDXBLYdTGIl6g_qHQ9IBBw4fBvkVuvL2dmVXQw=');
 }
