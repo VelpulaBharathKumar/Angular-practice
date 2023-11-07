@@ -1,29 +1,45 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-6 col-md-offset-3">
-      <form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">
-        <div class="form-group">
-          <label for="title">Title</label>
+    <div class="col-xs-12 col-md-6 col-md-offset-3" style="margin-bottom: 4px">
+      <form #postForm="ngForm">
+        <div class="form-group" style="margin-bottom: 4px">
+          <label for="email">Email</label>
           <input
             type="text"
             class="form-control"
-            id="title"
+            id="email"
             required
             ngModel
-            name="title"
+            name="email"
           />
         </div>
         <div class="form-group">
-          <label for="content">Title</label>
-          <textarea
+          <label for="password">Password</label>
+          <input
+            type="password"
             class="form-control"
-            id="content"
+            id="password"
             required
             ngModel
-            name="content"
-          ></textarea>
+            name="password"
+          />
         </div>
-        <button class="btn btn-primary" type="submit">Submit</button>
+        <button
+          class="btn btn-primary"
+          type="submit"
+          style="margin: 4px 0"
+          (click)="signUp(postForm.value)"
+        >
+          Sign Up
+        </button>
+        <button
+          class="btn btn-primary"
+          style="margin-left: 2px"
+          type="submit"
+          (click)="login(postForm.value)"
+        >
+          Login
+        </button>
       </form>
     </div>
   </div>
