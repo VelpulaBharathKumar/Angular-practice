@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent implements OnInit {
   title = 'todo_list';
   loadPosts = [];
+  message:string = '';
   constructor(private http: HttpClient) {}
 
   ngOnInit() {}
@@ -26,6 +27,7 @@ export class AppComponent implements OnInit {
       )
       .subscribe((data) => {
         console.log(data);
+        this.message = 'Sign Up successfully';
       });
   }
   //Signup api
