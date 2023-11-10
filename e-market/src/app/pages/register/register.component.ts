@@ -1,20 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  templateUrl: `./register.component.html`,
+  styleUrls: ['./register.component.scss'],
+  providers: [HttpClient],
 })
-export class AppComponent implements OnInit {
-  title = 'todo_list';
-  loadPosts = [];
-  message:string = '';
-  constructor(private http: HttpClient) {}
+export class RegisterComponent {
+  message = '';
+  constructor(
+    private location: Location,
+    private router: Router,
+    private http: HttpClient
+  ) {}
 
-  ngOnInit() {}
+  onBack() {
+    this.location.back();
+  }
 
   signUp(value: any) {
+    console.log(value);
     const vv = {
       email: value.email,
       password: value.password,
@@ -27,6 +34,7 @@ export class AppComponent implements OnInit {
       )
       .subscribe((data) => {
         console.log(data);
+        this.router.navigateByUrl('/products');
         this.message = 'Sign Up successfully';
       });
   }
