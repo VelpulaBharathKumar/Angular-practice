@@ -1,0 +1,31 @@
+<mat-toolbar color="primary" style="position: fixed">
+  <!-- <span>Bharath Kumar - Software Engineer</span>
+  <div class="spacer"></div> -->
+  <button
+    mat-mini-fab
+    disabled
+    aria-label="Example icon button with a home icon"
+  >
+    <mat-icon>home</mat-icon>
+  </button>
+  <button mat-button>Home</button>
+  <button mat-button (click)="scrollToSkills()">Skills</button>
+  <button mat-button>Work experience</button>
+  <button mat-button (click)="scrollToProjects()">Projects</button>
+  <button mat-button>About</button>
+
+  <!-- <mat-menu #aboveMenu="matMenu" yPosition="above"> -->
+  <!-- <a mat-list-item routerLink="/">Home</a>
+    <a mat-list-item routerLink="/about">About</a>
+    <a mat-list-item routerLink="/skills">Skills</a>
+    <a mat-list-item routerLink="/projects">Projects</a> -->
+  <!-- </mat-menu> -->
+</mat-toolbar>
+<app-about></app-about>
+<app-skills id="skillsSection"></app-skills>
+<app-work-experience id="wkexper"></app-work-experience>
+<app-projects id="projects"></app-projects>
+<app-contact></app-contact>
+<footer>
+  <p>&copy; 2023 Bharath Kumar. All rights reserved.</p>
+</footer>

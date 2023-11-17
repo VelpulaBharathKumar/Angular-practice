@@ -1,0 +1,28 @@
+/* home.component.css */
+.home {
+    background-color: #f8f9fa;
+    color: #495057;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .hero {
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+  }
+  
+  button {
+    font-size: 1em;
+  }
+  
